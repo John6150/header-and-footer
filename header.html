@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4667db6b8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+        }
+        .main-container{
+            /* width: 100vw; */
+            overflow: hidden;
+            font-family: sans-serif;
+            color: black;
+        }
+
+        .cart-container{
+            width: 100%;
+            height: 40px;
+            background-color: rgba(53, 53, 53, 0.856);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            margin: -5px 0 0 0;
+            z-index: 10;
+
+        }
+        .cart-container-content{
+            width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 0 500px;
+            /* background-color: red; */
+
+        }
+        .cart-container-content .material-symbols-outlined{
+            color: white;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            color: rgb(243, 6, 6);
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.445);
+            margin: 0 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            margin: 34px 0 0 0;
+            z-index: 10;
+        }
+
+        .nav-bar{
+            width: 800px;
+            height: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* background-color: blue; */
+        }
+        .nav img{
+            width: 200px;
+            margin-left: 10px;
+            z-index: 30;
+        }
+        .nav-bar button{
+            background: none;
+            outline: none;
+            border: none;
+            color: white;
+            width: 80px;
+        }
+        .nav-bar button a:hover{
+            /* border-bottom: 1px solid white; */
+            text-decoration: underline rgba(254, 0,2, 1);
+            text-underline-offset: 5px;
+            /* transition: text-decoration 200ms ease-in; */
+
+        }
+        .login a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .login .material-symbols-outlined{
+            color: white;
+        } 
+        #signup{
+            background-color: rgba(254, 0,2, 1);
+            padding: 15px;
+            width: 130px;
+            height: 40px;
+            border-radius: 3px;
+        }
+        a #signup:hover{
+            background-color: rgb(240, 43, 43);
+            transition: background-color 200ms ease-in, width 200ms ease-in;
+        }
+        .first{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(49, 49, 49);
+        }
+        .footer{
+            width: 100vw;
+            height: 500px;
+            background-color: black;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .footer1{
+            width: 400px;
+            height: 400px;
+            margin-left: 50px;
+            color: white;
+            line-height: 40px;
+            /* background-color: aqua; */
+        }
+        .footer1 img{
+            width: 140px;
+        }
+        .footer1 button{
+            width: 70px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            color: white;
+            background-color: rgba(254, 0,2, 1);
+
+        }
+        .footer1 input{
+            width: 250px;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 10px;
+            color: white;
+            border-bottom: 2px solid rgba(254, 0,2, 1);
+        }
+        .footer2{
+            width: 700px;
+            height: 300px;
+            margin-left: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: center; */
+            /* background-color: red; */
+        }
+        .footer3{
+            color: white;
+            width: 150px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: blue; */
+
+        }
+        .footer4{
+            color: white;
+            width: 250px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: green; */
+
+        }
+        .footer5{
+            color: white;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: blue; */
+        }
+        .footer6{
+            color: white;
+            width: 150px;
+            height: 75px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: blue; */
+        }
+        .footer7{
+            color: white;
+            width: 150px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* background-color: blue; */
+        }
+        .footer3 p, .footer4 p, .footer5 p, .footer6 p, .footer7 p{
+            color: rgb(248, 22, 22);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="cart-container">
+            <div class="cart-container-content">
+                <a href="#">START YOUR 10 DAY FREE TRIAL NOW!</a>
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+            </div>
+        </div>
+        <div class="nav">
+            <img src="logo.png" alt="">
+            <div class="nav-bar">
+                <button>
+                    <a href="#">VIDEOS</a>
+                </button>
+                <button>
+                    <a href="#">PROGRAMS</a>
+                </button>
+                <button>
+                    <a href="#">ABOUT</a>
+                </button>
+                <button>
+                    <a href="#">LET'S CHAT</a>
+                </button>
+                <button>
+                    <a href="#">SHOP</a>
+                </button>
+                <div class="login">
+                    <a href="#"><span class="material-symbols-outlined">account_circle</span>
+                        Login
+                </div>
+                <a href="#">
+                    <button id="signup">Sign Up</button>
+                </a>
+                
+            </div>
+        </div>
+        <div class="first">
+
+        </div>
+        <div class="footer">
+            <div class="footer1">
+                <img src="SLF.png" alt="">
+                <p>For the latest news subscribe below:</p>
+                <input type="text" placeholder="Email"> &nbsp;
+                <a href="#"><button>Send</button></a><br><br><br>
+                <p>&copy;  2023 Team Sleek Fitness</p>
+            </div>
+            <div class="footer2">
+                <div class="footer3">
+                    <p><b>MENU</b></p><br>
+                    <a href="#">VIDEOS</a>
+
+                    <a href="#">MEET STACY</a>
+                    
+                    <a href="#">EXPLORE SLF</a>
+                    
+                    <a href="#">LET'S CHAT</a>
+                    
+                    <a href="#">FAQ</a>
+                    
+                    <a href="#">TERMS AND CONDITIONS</a>
+                </div>
+
+                <div class="footer4">
+                    <p><b>RESOURCES</b></p><br>
+                    <a href="#">Fitness Challenges</a>
+                    <a href="#">Weekly Schedules</a>
+                    <a href="#">Fit 4 Fall Challenge Guide</a>
+                </div>
+
+                <div class="footer5">
+
+                    <div class="footer6">
+                        <p><b>SHOP</b></p><br>
+                        <a href="#">Policies</a>
+                    </div>
+
+                    <div class="footer7">
+                        <p><b>SOCIAL</b></p><br>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
